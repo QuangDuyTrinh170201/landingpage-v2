@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Mont-Regular";
+  src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mont-Bold";
+  src: url("./fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+
+
+
+body {
+  background-color: #0b0b0b;
+  color: white;
+}
+
+.element {
+  position: relative;
+}
+
+.element::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Chiều cao của border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #ffc107,
+    transparent
+  ); /* Màu gradient vàng đậm ở giữa và nhạt dần ra 2 bên */
+  clip-path: polygon(
+    0 100%,
+    10% 50%,
+    90% 50%,
+    100% 100%
+  ); /* Tạo độ dày mỏng dần ra hai bên */
+}
+
+.text-gradient {
+  background: linear-gradient(to bottom, #f5df77, #8f8245);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-gradient-l {
+  background: linear-gradient(-45deg, #f5e07717, #ffffff00);
+  border: 1px solid; /* Độ dày viền */
+  border-image: linear-gradient(-45deg, #f5e0773f, #ffffff00) 1; /* Sử dụng gradient cho viền */
+  border-left: none; /* Ẩn viền bên trái */
+}
+
+
+.background-gradient-r {
+  background: linear-gradient(45deg, #f5e07717, #ffffff00);
+  border: 1px solid; /* Độ dày viền */
+  border-image: linear-gradient(45deg, #f5e07763, #ffffff00) 1; /* Sử dụng gradient cho viền */
+  border-right: none; /* Ẩn viền bên trái */
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 0.6s linear;
+}
+
+
+.element-f {
+  position: relative;
+}
+
+.element-f::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Chiều cao của border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #ffc107,
+    transparent
+  ); /* Màu gradient vàng đậm ở giữa và nhạt dần ra 2 bên */
+  clip-path: polygon(
+    0 100%,
+    10% 50%,
+    90% 50%,
+    100% 100%
+  ); /* Tạo độ dày mỏng dần ra hai bên */
+}
+
+
+.background-gradient-c {
+  background: linear-gradient(45deg, #f5e0772a, #ffffff00);
+  border: 1px solid; /* Độ dày viền */
+  border-image: linear-gradient(45deg, #f5e0778f, #ffffff00) 1; /* Sử dụng gradient cho viền */
+  border-right: none; /* Ẩn viền bên trái */
+}
