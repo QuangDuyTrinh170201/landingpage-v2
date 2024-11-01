@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "prebuild": "react-snap",
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -14,6 +14,7 @@
     "emailjs-com": "^3.2.0",
     "firebase": "^10.14.1",
     "framer-motion": "^11.11.9",
+    "landing-page-v2": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
